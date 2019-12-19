@@ -190,11 +190,8 @@ inline mbus_status_t mbus_poll_response(mbus_t mb_context)
      return mbus_response(mb_context, MBUS_RESPONSE_ILLEGAL_FUNCTION);
 }
 
-extern uint32_t timer;
-
 uint32_t mbus_tickcount(){
-	
-	return timer;
+  return HAL_GetTick();
 }
 
 
